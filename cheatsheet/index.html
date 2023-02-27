@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <title>My Cheat Sheet</title>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#html">Semantic HTML</a></li>
+                <li><a href="#selectors">CSS: Selectors</a></li>
+                <li><a href="#box_model">CSS: Box Model</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="banner">
+            <h1>HTML <span>&</span> CSS</h1>
+            <h2>A Helpfull cheatsheet</h2>
+            <p>Here you'll find 3 tables about Semantic HTML, CSS Selectors and the Box Model.</p>
+        </div>
+        
+        <section class="content">
+            <article id="html">
+                <h3>Semantic HTML</h3>
+                <p>Semantic elements provide information about the content between the opening and closing tags. They help with accessibility, SEO, and to make source code easier to grasp.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Example</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Header</td>
+                            <td>for either navigational links or introductory content like h1 to h6 headings.</td>
+                            <td>
+                                <figure>
+                                    header
+                                      h1
+                                        Everything you need to know about pizza!
+                                      h1
+                                    header
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Nav</td>
+                            <td>Define a block of navigation links such as menus and tables of contents. It can be used inside of the header element.</td>
+                            <td>
+                                <figure>
+                                header 
+                                  nav
+                                    ul
+                                      li a href="#home">Home a li
+                                      li a href="#about">About a li     
+                                    ul
+                                  nav
+                                header
+                            </figure>
+                          </td>
+                        </tr>
+                        <tr>
+                            <td>Main</td>
+                            <td>Encapsulates the dominant content within a webpage.</td>
+                            <td>
+                                <figure>
+                                    main
+                                    article
+                                      h3 Baseball h3
+                                      p
+                                        The first game of baseball was played in Cooperstown, New York in the summer of 1839.
+                                      p
+                                    article
+                                  main
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Footer</td>
+                            <td>The content at the bottom of the subject information, contains information such as: contact information, copyright information, terms of use, site map, reference to top of page links.</td>
+                            <td>
+                                <figure>
+                                    footer
+                                      p Email me at Codey@Codecademy.com p
+                                    footer
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Section</td>
+                            <td>Defines elements, such as chapters, headings, or any other area of the document with the same theme.</td>
+                            <td>
+                                <figure>
+                                    section
+                                      h2 Fun Facts About Cricket h2 
+                                    section
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Article</td>
+                            <td>Holds content that makes sense on its own. Can hold content such as articles, blogs, comments, magazines, etc.</td>
+                            <td>
+                                <figure>
+                                    section
+                                      h2 Fun Facts About Cricket h2
+                                      article
+                                        p A single match of cricket can last up to 5 days. p
+                                      article
+                                    section
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aside</td>
+                            <td>Marks additional information that can enhance another element but isn't required to understand the main content. It can be used alongside other elements such as article or section.
+                                Examples:
+                                <ul>
+                                    <li>Bibliographies</li>
+                                    <li>Endnotes</li>
+                                    <li>Comments</li>
+                                    <li>Pull quotes</li>
+                                    <li>Editorial sidebars</li>
+                                    <li>Additional Information</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <figure>
+                                    article
+                                      p The first World Series was played between Pittsburgh and Boston in 1903 and was a nine-game series. p
+                                    article
+                                    aside
+                                      p
+                                      Babe Ruth once stated, “Heroes get remembered, but legends never die.” p
+                                    aside
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Figure</td>
+                            <td>An element used to encapsulate media such as an image, illustration, diagram, code snippet, etc, which is referenced in the main flow of the document.</td>
+                            <td>
+                                <figure>
+                                    figure
+                                      img src="overwatch.jpg"
+                                    figure
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Figcaption</td>
+                            <td>An element used to describe the media in the figure tag. Usually it will go inside figure. </td>
+                            <td>
+                                <figure>
+                                    figure
+	                                  img src="overwatch.jpg"
+	                                  figcaption This picture shows characters from Overwatch. figcaption
+                                   figure
+                                </figure>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Audio and Attributes</td>
+                            <td>To embed audio content into a document. It uses src attribute to link the audio source and others like autoplay or controls, these two go in the opening tag. </td>
+                            <td>
+                                <figure>
+                                    audio autoplay controls
+                                      source src="iAmAnAudioFile.mp3" type="audio/mp3"
+                                    audio
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Video</td>
+                            <td>Allows to add videos to our website. Attributes such as controls, autoplay and loop can be added.</td>
+                            <td>
+                                <figure>
+                                    video src="coding.mp4" controls Video not supported video
+                                </figure> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Embed</td>
+                            <td>A self-closing tag that can embed any media content including videos, audio files, and gifs from an external source. it's a deprecated tag.</td>
+                            <td>
+                                <figure>
+                                    embed src="download.gif"
+                                </figure> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <section class="content">
+            <article id="selectors">
+                <h3>CSS: Selectors</h3>
+                <p>A selector is used to target the specific HTML element(s) to be styled by the declaration.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Example</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Type</td>
+                            <td>Matches the type of the element in the HTML document. Sometimes referred to as the tag name or element selector.</td>
+                            <td>
+                                <figure>
+                                    p {
+                                    color: green;
+                                  }
+                                  
+                                  h1 {
+                                    color: maroon;
+                                  }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Universal</td>
+                            <td>Selects all elements of any type. It uses the * character and it's used for resetting default browser styling.</td>
+                            <td>
+                                <figure>
+                                    * { 
+                                      font-family: Verdana;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Class</td>
+                            <td>Sets an attribute to an HTML element to then select this element using CSS by prepending a period (.) to the class's name.</td>
+                            <td>
+                                <figure>
+                                    .green {
+                                      color: green;
+                                    }
+                                </figure>  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>Select a single element with CSS to give it its own unique style. Can only have a single value, and only be used once per page.</td>
+                            <td>
+                                <figure>
+                                    #article-title {
+                                      font-family: cursive;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Attribute</td>
+                            <td>Target HTML elements that already contain attributes, can be by their attribute or attribute value. It can get <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors#syntax">more granular</a> from there by adding type and/or attribute values.</td>
+                            <td>
+                                <figure>
+                                    [href] {
+                                      color: magenta;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pseudo-class</td>
+                            <td>They give elements a different state like changing the appearance of certain elements or be in a different state. Some examples are :focus, :visited, :disabled, and :active. A pseudo-class can be attached to any selector.</td>
+                            <td>
+                                <figure>
+                                    p:hover {
+                                      background-color: lime;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Specificity</td>
+                            <td>The order by which the browser decides which CSS styles will be displayed. Best practice is to use lowest degree of specificity, in case you need to override something. IDs are the most specific selector in CSS, followed by classes, and finally, type.</td>
+                            <td><figure></figure></td>
+                        </tr>
+                        <tr>
+                            <td>Chaining</td>
+                            <td>When you require an HTML element to have two or more CSS selectors at the same time. This is done by combining multiple selectors typing them together. In most cases a type and a class selector are combined.</td>
+                            <td>
+                                <figure>
+                                    h1.especial {
+                                      font-family: Tahoma;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Descendant Combinator</td>
+                            <td>Selecting elements that are nested within other HTML elements. It's done by typing the parent element first and then, separated by a space, the child.</td>
+                            <td>
+                                <figure>
+                                    .main-list li {
+                                      color: pink;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chaining and Specificity</td>
+                            <td>Adding more than one tag, class, or ID to a CSS selector increases the specificity of the CSS selector.</td>
+                            <td><figure></figure></td>
+                        </tr>
+                        <tr>
+                            <td>Multiple Selectors</td>
+                            <td>Add CSS styles to multiple CSS selectors all at once. We can separate the selectors by a comma to apply the same style to both separately.</td>
+                            <td>
+                                <figure>
+                                    h1, 
+                                    menu {
+                                      font-family: Georgia;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+            <article id="box_model">
+                <h3>CSS: Box Model</h3>
+                <p>All elements on a web page are interpreted by the browser as “living” inside of a box. This is important to understand how elements are positioned and displayed on a website. Every element is a box, most often rectangular.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>Height and Width</td>
+                            <td>An element's content has two dimensions: a height and a width, which will vary depending on their content.</td>
+                            <td>
+                                <figure>
+                                    p {
+                                      height: 80px;
+                                      width: 240px;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Borders</td>
+                            <td>A line that surrounds an element, like a frame around a painting. They can be set with a specific width, style, and color. They can also be set individually using border-top/right/bottom/left.</td>
+                            <td>
+                                <figure>
+                                    p {
+                                      border: 3px solid coral;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Border Radius</td>
+                            <td>Borders highlight the true shape of an element's box: square. It turns the regular corners of an element into round corners. a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50%.</td>
+                            <td>
+                                <figure>
+                                    .container {
+                                      height: 60px;
+                                      width: 60px;
+                                      border: 3px solid blue;
+                                      border-radius: 50%;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Padding</td>
+                            <td>The space between the contents of a box and the borders of a box. It is often used to expand the background color and make the content look less cramped. You can set the amount of padding on each side with padding-top/right/bottom/left.</td>
+                            <td>
+                                <figure>
+                                    p.content {
+                                      padding: 10px;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Padding Shorthand</td>
+                            <td>Set how much padding there should be on each side of the content in a single declaration.
+                                <ul>
+                                    <li>4 values: the amount of padding on each side, in a clockwise rotation.</li>
+                                    <li>3 values: If the left and right sides of the content can be equal, the second value sets the padding-left and padding-right values.</li>
+                                    <li>2 values: If the top and bottom sides can be equal and the left and right sides can be equal.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <figure>
+                                    p.content {
+                                      padding: 6px 11px 8px 9px;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Margin</td>
+                            <td>The space directly outside of the box. You can be more specific by typing the amount of margin on each side using Margin-top/right/bottom/left.</td>
+                            <td>
+                                <figure>
+                                    p {
+                                      margin: 5px;
+                                      margin-right: 15px;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Margin Shorthand</td>
+                            <td>The shorthand syntax for margins is the same as padding.
+                                <ul>
+                                    <li>4 values: the amount of padding on each side, in a clockwise rotation.</li>
+                                    <li>3 values: If the left and right sides of the content can be equal, the second value sets the padding-left and padding-right values.</li>
+                                    <li>2 values: If the top and bottom sides can be equal and the left and right sides can be equal.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <figure>
+                                    p.content {
+                                      pmargin: 6px 11px 8px 9px;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Auto</td>
+                            <td>The margin property also lets you center content, but you must follow a few syntax requirements: a width must be set for that element, set margin to 2 value notation 0 auto, The 0 sets the top and bottom margins to 0 pixels, The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element.</td>
+                            <td>
+                                <figure>
+                                    div.headline {
+                                      width: 400px;
+                                      margin: 0 auto;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Margin Collapse</td>
+                            <td>Top and bottom margins, also called vertical margins, collapse. The larger of the two vertical margins sets the distance between adjacent elements. The biggest vertical margin overtakes the smaller one.</td>
+                            <td>
+                                <figure>#img-one {
+                                    margin-bottom: 30px;
+                                  }
+  
+                                  #img-two {
+                                      margin-top: 20px;
+                                  }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Minimum and Maximum Height and Width</td>
+                            <td>CSS properties that can limit how narrow or how wide an element's box can be sized to: min-width/max-width and min-height/max-height.</td>
+                            <td>
+                                <figure>
+                                    p {
+                                      min-width: 30px;
+                                      max-width: 600px;
+                                      min-height:200px;
+                                      max-height: 100px;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Overflow</td>
+                            <td>When an element's content is larger than its parent's containing area, the overflow property controls what happens to content that spills, outside its box.
+                                <ul>
+                                    <li>hidden: any content that overflows will be hidden from view.</li>
+                                    <li>scroll: a scrollbar will be added to the element's box</li>
+                                    <li>visible: the overflow content will be displayed outside of the containing element. Note, this is the default value.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <figure>
+                                    p {
+                                      overflow: scroll;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Resetting Defaults</td>
+                            <td>User agent stylesheets often have default CSS rules that set default values for padding and margin. Many developers choose to reset these default values so that they can truly work with a clean slate. Often the first CSS rule in an external stylesheet.</td>
+                            <td>
+                                <figure>
+                                    * {
+                                      margin: 0;
+                                      padding: 0;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Visibility</td>
+                            <td>Elements can be hidden from view with the visibility property. It can be set to one of the following values:
+                                <ul>
+                                    <li>hidden: hides an element. It only hide the contents of the element. It will still leave an empty space where the element is intended to display.</li>
+                                    <li>visible: displays an element.</li>
+                                    <li>collapse: collapses an element.</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <figure>
+                                    .future {
+                                      visibility: hidden;
+                                    }
+                                </figure>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <div id="contact">
+            <strong><p>&copy; 2023 Victor Cifuentes Suil</p></strong>
+            <a href="mailto:cifusuil.victor@gmail.com">cifusuil.victor@gmail.com</a>
+        </div>
+    </footer>
+
+</body>
+</html>

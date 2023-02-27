@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: seashell;
+}
+
+header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background-color: #333333;
+    text-align: center;
+}
+  
+nav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+main {
+    position: relative;
+    top: 58px;
+}
+
+article {
+    padding: 20px 300px 0 20px;
+    margin: 20px 10px 50px 22px;
+    border: 5px solid royalblue;
+    background-color: aliceblue;
+}
+
+article h3 {
+    color: orange;
+    background-color: seashell;
+    padding: 15px 0;
+    margin: 0 12px;
+}
+
+article p {
+    margin: 10px 12px;
+}
+
+#banner {
+    height: 550px;
+    background-image: url(../images/html-tutorial-beginners-header.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+#banner h1 {
+    color: azure;
+    font-weight: bold;
+    font-size: 100px;
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+
+#banner h2 {
+    color: royalblue;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#banner p {
+    font-size: large;
+    font-weight: 600;
+    color: royalblue;
+}
+
+span {
+    color: orange;
+}
+
+footer {
+    position: relative;
+    top: 40px;
+    padding: 30px 0;
+    margin: 0 0 0 22px;
+}
+
+table {
+    margin: 10px 12px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td {
+    border: 2px solid royalblue;
+    padding: 5px 2px 5px 20px;
+    background-color: seashell;
+}
+
+th {
+    border: 2px solid royalblue;
+    padding: 5px 2px 5px 20px;
+    color: orange;
+    background-color: aliceblue;
+}
+
+figure {
+    font-family: monospace;
+    background-color: bisque;
+}
